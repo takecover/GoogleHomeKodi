@@ -983,7 +983,10 @@ exports.kodiOpenTvshow = (request) => {
 };
 
 exports.kodiShowMusicPlaylist = (request) => {
-    return request.kodi.GUI.ActivateWindow({ 'window': 'musicplaylist' });
+    return request.kodi.Input.Home()
+        .then(() => request.kodi.GUI.ActivateWindow({
+            window: 'musicplaylist'
+        }));
 };
 
 // Start a full library scan
