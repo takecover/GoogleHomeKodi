@@ -198,6 +198,9 @@ app.all('/displayinfo', exec(Helper.kodiDisplayInfo));
 // Navigation Home
 app.all('/navhome', exec(Helper.kodiNavHome));
 
+// Toggle Fullscreen
+app.all('/togglefullscreen', exec(Helper.kodiToggleFullscreen));
+
 // Show window
 app.all('/showWindow', exec(Helper.kodiShowWindow));
 

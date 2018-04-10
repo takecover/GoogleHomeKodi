@@ -584,6 +584,14 @@ exports.kodiNavHome = (request, response) => { // eslint-disable-line no-unused-
     return Kodi.Input.Home(); // eslint-disable-line new-cap
 };
 
+// Toggle Fullscreen
+exports.kodiToggleFullscreen = (request, response) => {
+    console.log('Toggle Fullscreen request received');
+    let Kodi = request.kodi;
+
+    return Kodi.Input.ExecuteAction({ "action": "togglefullscreen" });
+};
+
 const showWindow = (kodi, window) => {
     return kodi.GUI.ActivateWindow({ // eslint-disable-line new-cap
         'window': window.section.toLowerCase(),
