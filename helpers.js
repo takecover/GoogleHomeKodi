@@ -982,6 +982,10 @@ exports.kodiOpenTvshow = (request) => {
         .then((tvShow) => kodiOpenVideoWindow(tvShow.file, request.kodi));
 };
 
+exports.kodiShowMusicPlaylist = (request) => {
+    return request.kodi.GUI.ActivateWindow({ 'window': 'musicplaylist' });
+};
+
 // Start a full library scan
 exports.kodiScanLibrary = (request) => request.kodi.VideoLibrary.Scan(); // eslint-disable-line new-cap
 

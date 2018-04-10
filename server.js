@@ -204,6 +204,9 @@ app.all('/togglefullscreen', exec(Helper.kodiToggleFullscreen));
 // Show window
 app.all('/showWindow', exec(Helper.kodiShowWindow));
 
+// Show Music Playlist
+app.all('/showMusicPlaylist', exec(Helper.kodiShowMusicPlaylist));
+
 app.all('/executeAddon', exec(Helper.kodiExecuteAddon));
 
 // **************************End of navigation controls
